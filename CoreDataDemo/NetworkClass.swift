@@ -22,11 +22,11 @@ class NetworkClass: NSObject {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 print(error!.localizedDescription)
-                funcComplition(nil,error as NSError!);
+                funcComplition(nil,error as NSError?);
                 
             }
             guard let data = data else { return }
-  
+            
             do {
                 //using when json start from Array
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []){
@@ -37,11 +37,11 @@ class NetworkClass: NSObject {
                             SingloltonClass.sharedObject.saveUser(dictionary: item )
                         }
                         let array = SingloltonClass.sharedObject.fatchAllData() 
-                        funcComplition(array , error as NSError!);
+                        funcComplition(array , error as NSError?);
                     }
                 }
             }
-
+            
             }.resume()
     }
 }

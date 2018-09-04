@@ -65,7 +65,19 @@ class SingloltonClass: NSObject {
     }
     
     
- // MARK: - Core Data Saving support
+    //MARK :- delete data
+    func deletData( user: User) {
+    let context = persistentContainer.viewContext
+       var allDataArray : [User] = []
+        allDataArray = self.fatchAllData()
+        print("Before>>>>>>>>>>>",allDataArray)
+        context.delete(user)
+        allDataArray = self.fatchAllData()
+         print("After>>>>>>>>>>>",allDataArray)
+      self.saveContext()
+    }
+    
+    // MARK: - Core Data Saving support
     func saveContext () {
         let context = persistentContainer.viewContext
         

@@ -1,0 +1,20 @@
+PODS:
+  - MBProgressHUD (1.1.0)
+  - MGSwipeTableCell (1.6.7)
+
+DEPENDENCIES:
+  - MBProgressHUD
+  - MGSwipeTableCell
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MBProgressHUD
+    - MGSwipeTableCell
+
+SPEC CHECKSUMS:
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MGSwipeTableCell: fb20e983988bde2b8d0df29c2d9e1d8ffd10b74a
+
+PODFILE CHECKSUM: 9e2b61ef86fe910ae9fc155a0a93102a383bb58f
+
+COCOAPODS: 1.5.3
